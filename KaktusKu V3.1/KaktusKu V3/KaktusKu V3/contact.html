@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontak Kami - KaktusKu</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- CSS Utama -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="kumpulan_css/side_menu.css" />
+    <link rel="stylesheet" href="kumpulan_css/animation.css" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Pacifico&family=Quicksand:wght@300..700&display=swap");
+
+      .logo {
+        font-family: "Pacifico";
+      }
+
+      .about-title {
+        font-family: "Quicksand";
+      }
+
+      .KMK {
+        font-family: "Merriweather";
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <div class="logo">🌵 KaktusKu</div>
+        <div class="auth-links">
+          <a href="login.html">Login</a>
+          <a href="signup.html">Sign Up</a>
+        </div>
+      </nav>
+      <div id="side-menu" class="side-menu">
+        <a href="index.html">Beranda</a>
+        <a href="about.html">Tentang Kami</a>
+        <a href="products.html">Produk</a>
+        <a href="service.html">Service</a>
+        <a href="contact.html">Kontak</a>
+      </div>
+    </header>
+
+    <div class="kontak-container page-enter">
+      <h1 style="text-align: center" class="about-title">Hubungi Kami</h1>
+      <p style="text-align: center">
+        Kami siap membantu Anda untuk segala kebutuhan kaktus dan sukulen 🌵
+      </p>
+
+      <div class="kontak-grid">
+        <div class="kontak-form fade-stagger fade-delay-1_3">
+          <h2 class="KMK">Kirim Pesan</h2>
+          <form>
+            <input type="text" placeholder="Nama Lengkap" required />
+            <input type="email" placeholder="Email" required />
+            <textarea rows="5" placeholder="Pesan Anda..." required></textarea>
+            <button type="submit" class="btn">Kirim</button>
+          </form>
+        </div>
+
+        <div class="kontak-info fade-stagger fade-delay-2_3">
+          <h2 class="KMK">Informasi Kontak</h2>
+          <p>
+            <i class="fa fa-map-marker"></i>Jln. Patimura, Jlr.4, Mingkung Jaya,
+            Jambi
+          </p>
+          <p><i class="fa fa-envelope"></i>kaktusku93@gmail.com</p>
+          <p><i class="fa fa-phone"></i>+62 857-000-000</p>
+
+          <h2 class="KMK">Ikuti Kami</h2>
+          <div class="social-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 KaktusKu | Merawat Tanaman, Menyegarkan Hidup 🌿</p>
+      <div class="social-icons">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+      </div>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("side-menu");
+        menu.classList.toggle("open");
+      }
+    </script>
+
+    <script>
+      // Toggle menu saat ikon ☰ diklik
+      function toggleMenu() {
+        const menu = document.getElementById("side-menu");
+        menu.classList.toggle("open");
+      }
+
+      // Menutup side menu jika klik di luar
+      document.addEventListener("click", function (event) {
+        const menu = document.getElementById("side-menu");
+        const menuIcon = document.querySelector(".menu-icon");
+
+        // Jika menu terbuka dan klik bukan di dalam menu atau ikon menu
+        if (
+          menu.classList.contains("open") &&
+          !menu.contains(event.target) &&
+          !menuIcon.contains(event.target)
+        ) {
+          menu.classList.remove("open");
+        }
+      });
+    </script>
+
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", sans-serif;
+        background-color: #f1f8e9;
+        color: #33691e;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,211 @@
+:root {
+    --primary: #4CAF50;
+    --primary-dark: #388E3C;
+    --background: #f9fdfb;
+    --text-dark: #1b5e20;
+    --accent: #e8f5e9;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--background);
+    color: #333;
+}
+
+header {
+    background: linear-gradient(to right, var(--primary-dark), var(--primary));
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 1.7rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+header a {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.header-logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.8rem;
+}
+
+.btn-kembali-navbar {
+    background-color: #f1f8e9;
+    color: #2e7d32;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid #a5d6a7;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-kembali-navbar i {
+    margin-right: 8px;
+}
+
+.btn-kembali-navbar:hover {
+    background-color: #c8e6c9;
+    color: #1b5e20;
+    transform: translateY(-2px);
+}
+
+
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    background-color: #fff;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--primary);
+    outline: none;
+}
+
+.summary-box {
+    background-color: var(--accent);
+    padding: 24px;
+    border-radius: 14px;
+    border-left: 5px solid var(--primary-dark);
+}
+
+.summary-box p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.summary-box .total {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-top: 20px;
+}
+
+.btn {
+    width: 100%;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.back-link {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1rem;
+}
+
+.back-link a {
+    color: var(--primary-dark);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.back-link a:hover {
+    color: #2e7d32;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+        font-size: 1.5rem;
+    }
+
+    .container {
+        padding: 20px;
+    }
+}
+/* ANIMASI MUNCUL HEADER */
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ANIMASI LOGO */
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Terapkan animasi ke header dan logo */
+header {
+    animation: slideDown 0.6s ease-out;
+}
+
+.header-logo {
+    animation: fadeInLeft 0.8s ease-out;
+}

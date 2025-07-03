@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layanan Kami</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="kumpulan_css/side_menu.css" />
+    <link rel="stylesheet" href="kumpulan_css/animation.css" />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Pacifico&family=Quicksand:wght@300..700&display=swap");
+
+      .logo {
+        font-family: "Pacifico";
+      }
+
+      .judul-layanan {
+        font-family: "Quicksand";
+      }
+
+      .KMK {
+        font-family: "Merriweather";
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <div class="logo">🌵 KaktusKu</div>
+        <div class="auth-links">
+          <a href="login.html">Login</a>
+          <a href="signup.html">Sign Up</a>
+        </div>
+      </nav>
+
+      <div id="side-menu" class="side-menu">
+        <a href="index.html">Beranda</a>
+        <a href="about.html">Tentang Kami</a>
+        <a href="products.html">Produk</a>
+        <a href="service.html">Service</a>
+        <a href="contact.html">Kontak</a>
+      </div>
+    </header>
+
+    <div class="layanan-container page-enter">
+      <h1 class="judul-layanan">Layanan Kami</h1>
+
+      <div class="layanan-grid">
+        <section class="layanan-item fade-stagger fade-delay-1_2">
+          <div class="icon-wrapper">
+            <i class="fa fa-truck"></i>
+          </div>
+          <h2 class="KMK">Pengiriman Tanaman</h2>
+          <p>
+            Kami menyediakan layanan pengiriman tanaman langsung ke rumah atau
+            lokasi acara Anda. Tanaman dikemas rapi dan dikirim dengan aman agar
+            tiba dalam kondisi terbaik.
+          </p>
+        </section>
+
+        <section class="layanan-item fade-stagger fade-delay-2_2">
+          <div class="icon-wrapper">
+            <i class="fa fa-calendar"></i>
+          </div>
+          <h2 class="KMK">Sewa untuk Acara</h2>
+          <p>
+            Butuh tanaman hias untuk dekorasi acara? Kami menyediakan penyewaan
+            tanaman untuk pernikahan, pesta, pameran, dan event lainnya dengan
+            tampilan menarik dan segar.
+          </p>
+        </section>
+
+        <section class="layanan-item fade-stagger fade-delay-3_2">
+          <div class="icon-wrapper">
+            <i class="fa fa-info-circle"></i>
+          </div>
+          <h2 class="KMK">Petunjuk Perawatan</h2>
+          <p>
+            Setiap tanaman sewaan dilengkapi dengan panduan perawatan sederhana.
+            Anda akan tahu cara menyiram, menempatkan, dan menjaga tanaman tetap
+            sehat selama digunakan.
+          </p>
+        </section>
+
+        <section class="layanan-item fade-stagger fade-delay-4_2">
+          <div class="icon-wrapper">
+            <i class="fa fa-object-group"></i>
+          </div>
+          <h2 class="KMK">Susunan Kustom</h2>
+          <p>
+            Ingin susunan tanaman yang unik? Kami siap membuat tata letak
+            tanaman sesuai keinginan Anda, lengkap dengan pot pilihan dan nuansa
+            yang cocok untuk tema Anda.
+          </p>
+        </section>
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2025 KaktusKu | Merawat Tanaman, Menyegarkan Hidup 🌿</p>
+      <div class="social-icons">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+      </div>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("side-menu");
+        menu.classList.toggle("open");
+      }
+    </script>
+
+    <script>
+      // Toggle menu saat ikon ☰ diklik
+      function toggleMenu() {
+        const menu = document.getElementById("side-menu");
+        menu.classList.toggle("open");
+      }
+
+      // Menutup side menu jika klik di luar
+      document.addEventListener("click", function (event) {
+        const menu = document.getElementById("side-menu");
+        const menuIcon = document.querySelector(".menu-icon");
+
+        // Jika menu terbuka dan klik bukan di dalam menu atau ikon menu
+        if (
+          menu.classList.contains("open") &&
+          !menu.contains(event.target) &&
+          !menuIcon.contains(event.target)
+        ) {
+          menu.classList.remove("open");
+        }
+      });
+    </script>
+
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+
+    <!-- Tes icon WA -->
+    <a
+      href="https://wa.me/6285769659417"
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener"
+    >
+      <i class="fa fa-whatsapp"></i> Silahkan Hubungi Saya
+    </a>
+    <!-- Tes icon wa end -->
+  </body>
+</html>

@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Produk KaktusKu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="kumpulan_css/side_menu.css">
+    <link rel="stylesheet" href="kumpulan_css/animation.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Pacifico&family=Quicksand:wght@300..700&display=swap');
+
+        .logo {
+            font-family: "Pacifico";
+        }
+
+        .about-title {
+            font-family: "Quicksand";
+        }
+
+        .KMK {
+            font-family: "Merriweather";
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <div class="logo">🌵KaktusKu</div>
+            <a href="keranjang.html" class="cart-icon">
+                <i class="fa fa-shopping-cart"></i>
+                <span id="cart-count" class="cart-count">0</span>
+            </a>
+            <div class="auth-links">
+                <a href="login.html">Login</a>
+                <a href="signup.html">Sign Up</a>
+            </div>
+        </nav>
+
+        <div id="side-menu" class="side-menu">
+            <a href="index.html">Beranda</a>
+            <a href="about.html">Tentang Kami</a>
+            <a href="products.html">Produk</a>
+            <a href="service.html">Service</a>
+            <a href="contact.html">Kontak</a>
+        </div>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("side-menu");
+            menu.classList.toggle("open");
+        }
+    </script>
+    <main>
+        <h1 class="about-title">Koleksi Kaktus & Sukulen</h1>
+        <div class="produk-grid">
+
+            <article class="produk-card">
+                <img src="gambar/kaktus-mini.jpg" alt="Kaktus Mini" class="produk-img" />
+                <div class="produk-info">
+                    <h3 class="KMK">Kaktus Mini</h3>
+                    <p>Kaktus kecil yang lucu, cocok untuk meja kerja atau dekorasi kamar.</p>
+                    <div class="harga">Rp 25.000 / Beli | Rp 10.000 / Sewa</div>
+                    <div class="btn-group">
+                        <button class="btn-beli"
+                            onclick="tambahKeKeranjang('Kaktus Mini', 25000, 'beli', 'gambar/kaktus-mini.jpg')">Beli</button>
+                        <button class="btn-sewa"
+                            onclick="tambahKeKeranjang('Kaktus Mini', 10000, 'sewa', 'gambar/kaktus-mini.jpg')">Sewa</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="produk-card">
+                <img src="gambar/sukulen-gantung.jpg" alt="Sukulen Gantung" class="produk-img" />
+                <div class="produk-info">
+                    <h3 class="KMK">Sukulen Gantung</h3>
+                    <p>Sukulen cantik yang bisa digantung, memperindah sudut ruanganmu.</p>
+                    <div class="harga">Rp 30.000 / Beli | Rp 12.000 / Sewa</div>
+                    <div class="btn-group">
+                        <button class="btn-beli"
+                            onclick="tambahKeKeranjang('Sukulen Gantung', 30000, 'beli', 'gambar/sukulen-gantung.jpg')">Beli</button>
+                        <button class="btn-sewa"
+                            onclick="tambahKeKeranjang('Sukulen Gantung', 12000, 'sewa', 'gambar/sukulen-gantung.jpg')">Sewa</button>
+
+                    </div>
+                </div>
+            </article>
+
+            <article class="produk-card">
+                <img src="gambar/kaktus-berbunga.jpg" alt="Kaktus Berbunga" class="produk-img" />
+                <div class="produk-info">
+                    <h3 class="KMK">Kaktus Berbunga</h3>
+                    <p>Kaktus cantik dengan bunga warna-warni yang memikat.</p>
+                    <div class="harga">Rp 60.000 / Beli | Rp 22.000 / Sewa</div>
+                    <div class="btn-group">
+                        <button class="btn-beli"
+                            onclick="tambahKeKeranjang('Kaktus Berbunga', 60000, 'beli', 'gambar/kaktus-berbunga.jpg')">Beli</button>
+                        <button class="btn-sewa"
+                            onclick="tambahKeKeranjang('Kaktus Berbunga', 22000, 'sewa', 'gambar/kaktus-berbunga.jpg')">Sewa</button>
+
+                    </div>
+                </div>
+            </article>
+
+            <article class="produk-card">
+                <img src="gambar/sukulen-putih.jpg" alt="Sukulen Putih" class="produk-img" />
+                <div class="produk-info">
+                    <h3 class="KMK">Sukulen Putih</h3>
+                    <p>Sukulen berwarna putih dengan tekstur lembut, sangat elegan.</p>
+                    <div class="harga">Rp 50.000 / Beli | Rp 20.000 / Sewa</div>
+                    <div class="btn-group">
+                        <button class="btn-beli"
+                            onclick="tambahKeKeranjang('Sukulen Putih', 50000, 'beli', 'gambar/sukulen-putih.jpg')">Beli</button>
+                        <button class="btn-sewa"
+                            onclick="tambahKeKeranjang('Sukulen Putih', 20000, 'sewa', 'gambar/sukulen-putih.jpg')">Sewa</button>
+
+                    </div>
+                </div>
+            </article>
+
+            <article class="produk-card">
+                <img src="gambar/kaktus-gemuk.jpg" alt="Kaktus Gemuk" class="produk-img" />
+                <div class="produk-info">
+                    <h3 class="KMK">Kaktus Gemuk</h3>
+                    <p>Kaktus dengan batang gemuk, cocok untuk dekorasi minimalis.</p>
+                    <div class="harga">Rp 40.000 / Beli | Rp 15.000 / Sewa</div>
+                    <div class="btn-group">
+                        <button class="btn-beli"
+                            onclick="tambahKeKeranjang('Kaktus Gemuk', 40000, 'beli', 'gambar/kaktus-gemuk.jpg')">Beli</button>
+                        <button class="btn-sewa"
+                            onclick="tambahKeKeranjang('Kaktus Gemuk', 15000, 'sewa', 'gambar/kaktus-gemuk.jpg')">Sewa</button>
+
+                    </div>
+                </div>
+            </article>
+
+            <article class="produk-card">
+                <img src="gambar/sukulen-kuning.jpg" alt="Sukulen Kuning" class="produk-img" />
+                <div class="produk-info">
+                    <h3 class="KMK">Sukulen Kuning</h3>
+                    <p>Sukulen warna kuning cerah yang menambah kesan ceria pada ruangan.</p>
+                    <div class="harga">Rp 55.000 / Beli | Rp 21.000 / Sewa</div>
+                    <div class="btn-group">
+                        <button class="btn-beli"
+                            onclick="tambahKeKeranjang('Sukulen Kuning', 55000, 'beli', 'gambar/sukulen-kuning.jpg')">Beli</button>
+                        <button class="btn-sewa"
+                            onclick="tambahKeKeranjang('Sukulen Gantung', 21000, 'sewa', 'gambar/sukulen-kuning.jpg')">Sewa</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="produk-card">
+                <img src="gambar/kaktus-mini-putih.jpg" alt="Kaktus Mini Putih" class="produk-img" />
+                <div class="produk-info">
+                    <h3 class="KMK">Kaktus Mini Putih</h3>
+                    <p>Kaktus mini dengan warna putih lembut, cocok untuk dekorasi meja.</p>
+                    <div class="harga">Rp 28.000 / Beli | Rp 11.000 / Sewa</div>
+                    <div class="btn-group">
+                        <button class="btn-beli"
+                            onclick="tambahKeKeranjang('Kaktus Mini Putih', 28000, 'beli', 'gambar/kaktus-mini-putih.jpg')">Beli</button>
+                        <button class="btn-sewa"
+                            onclick="tambahKeKeranjang('Kaktus Mini Putih', 11000, 'sewa', 'gambar/kaktus-mini-putih.jpg')">Sewa</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="produk-card">
+                <img src="gambar/sukulen-merah.jpg" alt="Sukulen Merah" class="produk-img" />
+                <div class="produk-info">
+                    <h3 class="KMK">Sukulen Merah</h3>
+                    <p>Sukulen warna merah menyala, pilihan tepat untuk sentuhan warna kuat.</p>
+                    <div class="harga">Rp 52.000 / Beli | Rp 19.000 / Sewa</div>
+                    <div class="btn-group">
+                        <button class="btn-beli"
+                            onclick="tambahKeKeranjang('Sukulen Merah', 52000, 'beli', 'gambar/sukulen-merah.jpg')">Beli</button>
+                        <button class="btn-sewa"
+                            onclick="tambahKeKeranjang('Sukulen Merah', 19000, 'sewa', 'gambar/sukulen-merah.jpg')">Sewa</button>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+        </div>
+    </main>
+
+    <main>
+        <h1 class="about-title">Koleksi Pot khusus Kaktus</h1>
+        <div class="produk-grid">
+
+            <article class="produk-card">
+                <img src="gambar/pot kaktus 9.jpg" alt="Pot kaktus 9" class="produk-img" />
+                <div class="produk-info">
+                    <h3 class="KMK">Original Earthlings Sitting </h3>
+                    <p>Pot kaktus plastik lucu, cocok buat dekorasi kamar anak perempuan.</p>
+                    <div class="harga">Rp 55.000 / Beli | Rp 12.000 / Sewa</div>
+                    <div class="btn-group">
+                        <button class="btn-beli"
+                            onclick="tambahKeKeranjang('Original Earthlings Sitting', 55000, 'beli', 'gambar/pot kaktus 9.jpg')">Beli</button>
+                        <button class="btn-sewa"
+                            onclick="tambahKeKeranjang('Original Earthlings Sitting', 12000, 'sewa', 'gambar/pot kaktus 9.jpg')">Sewa</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="produk-card">
+                <img src="gambar/pot kaktus 2.jpg" alt="Pot Katus 2" class="produk-img" />
+                <div class="produk-info">
+                    <h3 class="KMK">Cute Ceramic Succulent Garden Pots</h3>
+                    <p>Pot keramik yang cerah, cocok ditaruh di tempat indor</p>
+                    <div class="harga">Rp 45.000 / Beli | Rp 10.000 / Sewa</div>
+                    <div class="btn-group">
+                        <button class="btn-beli"
+                            onclick="tambahKeKeranjang('Cute Ceramic Succulent Garden Pots', 45000, 'beli', 'gambar/pot kaktus 2.jpg')">Beli</button>
+                        <button class="btn-sewa"
+                            onclick="tambahKeKeranjang('Cute Ceramic Succulent Garden Pots', 10000, 'sewa', 'gambar/pot kaktus 2.jpg')">Sewa</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="produk-card">
+                <img src="gambar/pot kaktus 3.jpg" alt="Pot Kaktus 3" class="produk-img" />
+                <div class="produk-info">
+                    <h3 class="KMK">Cute Animal Ceramics</h3>
+                    <p>Pot kaktus yang lucu, cocok dibelikan untuk anak.</p>
+                    <div class="harga">Rp 120.000 / Beli | Rp 22.000 / Sewa</div>
+                    <div class="btn-group">
+                        <button class="btn-beli"
+                            onclick="tambahKeKeranjang('Cute Animal Ceramic', 120000, 'beli', 'gambar/pot kaktus 3.jpg')">Beli</button>
+                        <button class="btn-sewa"
+                            onclick="tambahKeKeranjang('Cute Animal Ceramic', 22000, 'sewa', 'gambar/pot kaktus 3.jpg')">Sewa</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="produk-card">
+                <img src="gambar/pot kaktus 4.jpg" alt="Pot Kaktus 4" class="produk-img" />
+                <div class="produk-info">
+                    <h3 class="KMK"> Succulent Pots</h3>
+                    <p>Pot keramik yang sangat minimalis, cocok buat pengisi meja kalian.</p>
+                    <div class="harga">Rp 80.000 / Beli | Rp 20.000 / Sewa</div>
+                    <div class="btn-group">
+                        <button class="btn-beli"
+                            onclick="tambahKeKeranjang('Succulent Pots', 80000, 'beli', 'gambar/pot kaktus 4.jpg')">Beli</button>
+                        <button class="btn-sewa"
+                            onclick="tambahKeKeranjang('Succulent Pots', 20000, 'sewa', 'gambar/pot kaktus 4.jpg')">Sewa</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="produk-card">
+                <img src="gambar/pot kaktus 5.jpg" alt="Pot Kaktus 5" class="produk-img" />
+                <div class="produk-info">
+                    <h3 class="KMK">Ceramic Planter Pot with Drainage Hole and Saucer</h3>
+                    <p>Pot keramik yang sangat minimalis, cocok ditaruh di tempat outdor.</p>
+                    <div class="harga">Rp 85.000 / Beli | Rp 15.000 / Sewa</div>
+                    <div class="btn-group">
+                        <button class="btn-beli"
+                            onclick="tambahKeKeranjang('Ceramic Planter Pot with Drainage Hole and Saucer', 85000, 'beli', 'gambar/pot kaktus 5.jpg')">Beli</button>
+                        <button class="btn-sewa"
+                            onclick="tambahKeKeranjang('Ceramic Planter Pot with Drainage Hole and Saucer', 15000, 'sewa', 'gambar/pot kaktus 5.jpg')">Sewa</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="produk-card">
+                <img src="gambar/pot kaktus 6.jpg" alt="Pot kaktus 6" class="produk-img" />
+                <div class="produk-info">
+                    <h3 class="KMK">Ceramic Planter Pot with Drainage Hole and Saucer V2</h3>
+                    <p>Pot keramik lucu, cocok untuk anak perempuan.</p>
+                    <div class="harga">Rp 120.000 / Beli | Rp 21.000 / Sewa</div>
+                    <div class="btn-group">
+                        <button class="btn-beli"
+                            onclick="tambahKeKeranjang('Ceramic Planter Pot with Drainage Hole and Saucer V2', 120000, 'beli', 'gambar/pot kaktus 6.jpg')">Beli</button>
+                        <button class="btn-sewa"
+                            onclick="tambahKeKeranjang('Ceramic Planter Pot with Drainage Hole and Saucer V2', 21000, 'sewa', 'gambar/pot kaktus 6.jpg')">Sewa</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="produk-card">
+                <img src="gambar/pot kaktus 7.jpg" alt="Pot Kaktus 7" class="produk-img" />
+                <div class="produk-info">
+                    <h3 class="KMK">Transparent Plastic Garden Pots Planter with Saucer 4/5 /6/7 /8 inch Plant Pot</h3>
+                    <p>Pot kaktus plastis, cocok untuk di taruh di halaman/farm kalian.</p>
+                    <div class="harga">Rp 12.000 / Beli | Rp 2.000 / Sewa</div>
+                    <div class="btn-group">
+                        <button class="btn-beli"
+                            onclick="tambahKeKeranjang('Transparent Plastic Garden Pots Planter with Saucer 4/5 /6/7 /8 inch Plant Pot', 12000, 'beli', 'gambar/pot kaktus 7.jpg')">Beli</button>
+                        <button class="btn-sewa"
+                            onclick="tambahKeKeranjang('Transparent Plastic Garden Pots Planter with Saucer 4/5 /6/7 /8 inch Plant Pot', 2000, 'sewa', 'gambar/pot kaktus 7.jpg')">Sewa</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="produk-card">
+                <img src="gambar/pot kaktus 8.jpg" alt="pot Kaaktus 8" class="produk-img" />
+                <div class="produk-info">
+                    <h3 class="KMK">4 Inch Terracotta Plant Pots with Saucer - 6 Pack Clay Flower Pots</h3>
+                    <p>pot plastik, cocok bagi kalian ingin berjualan kaktus.</p>
+                    <div class="harga">Rp 30.000 / Beli | Rp 10.000 / Sewa</div>
+                    <div class="btn-group">
+                        <button class="btn-beli"
+                            onclick="tambahKeKeranjang('4 Inch Terracotta Plant Pots with Saucer - 6 Pack Clay Flower Pots', 30000, 'beli', 'gambar/pot kaktus 8.jpg')">Beli</button>
+                        <button class="btn-sewa"
+                            onclick="tambahKeKeranjang('4 Inch Terracotta Plant Pots with Saucer - 6 Pack Clay Flower Pots', 10000, 'sewa', 'gambar/pot kaktus 8.jpg')">Sewa</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+        </div>
+
+        <main>
+            <h1 class="about-title">Pupuk</h1>
+            <div class="produk-grid">
+
+                <article class="produk-card">
+                    <img src="gambar/pupuk kaktus 1.webp" alt="Pupuk Kaktus" class="produk-img" />
+                    <div class="produk-info">
+                        <h3 class="KMK">Pupuk NPK 100gram Pupuk Penyubur Kaktus dan Tanaman Hias</h3>
+                        <p>Cocok untuk meyehatkan kaktus kalian .</p>
+                        <div class="harga">Rp 28.000 / Pcs</div>
+                        <div class="btn-group">
+                            <button class="btn-beli"
+                                onclick="tambahKeKeranjang('Pupuk NPK 100gram Pupuk Penyubur Kaktus dan Tanaman Hias', 28000, 'Beli', 'gambar/pupuk kaktus 1.webp')">Beli</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="produk-card">
+                    <img src="gambar/pupuk kaktus2.jpg" alt="Pupuk kaktus 2" class="produk-img" />
+                    <div class="produk-info">
+                        <h3 class="KMK">Pupuk Kaktus Organik GDM 1Liter</h3>
+                        <p>Bisa diguanakan untuk semua tanaman.</p>
+                        <div class="harga">Rp 40.000 / Pcs</div>
+                        <div class="btn-group">
+                            <button class="btn-beli"
+                                onclick="tambahKeKeranjang('Pupuk Kaktus Organik GDM 1Liter', 40000, 'Beli', 'gambar/pupuk kaktus2.jpg')">Beli</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="produk-card">
+                    <img src="gambar/pupuk kaktus 3.jpg" alt="Pupuk Kaaktus 3" class="produk-img" />
+                    <div class="produk-info">
+                        <h3 class="KMK">Pupuk Cactus & Succulent Focus Cair 100 ml ASLI Tanaman Kaktus Sukulen</h3>
+                        <p>cocok untuk menyehatkan kaktus kalian.</p>
+                        <div class="harga">Rp 68.000 / Botol</div>
+                        <div class="btn-group">
+                            <button class="btn-beli"
+                                onclick="tambahKeKeranjang('Pupuk Cactus & Succulent Focus Cair 100 ml ASLI Tanaman Kaktus Sukulen', 68000, 'Beli', 'gambar/pupuk kaktus 3.jpg')">Beli</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="produk-card">
+                    <img src="gambar/pupuk kaktus 4.webp" alt="Pupuk Kaktus 4" class="produk-img" />
+                    <div class="produk-info">
+                        <h3 class="KMK">Dynamite Cactus & Succulent Food 18-6-8</h3>
+                        <p>Cocok untuk kaktus high class kalian.</p>
+                        <div class="harga">Rp 180.000 / Botol</div>
+                        <div class="btn-group">
+                            <button class="btn-beli"
+                                onclick="tambahKeKeranjang('Dynamite Cactus & Succulent Food 18-6-8', 180000, 'Beli', 'gambar/pupuk kaktus 4.webp')">Beli</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="produk-card">
+                    <img src="gambar/pupuk kaktus 5.webp" alt="Pupuk Kaktus 5" class="produk-img" />
+                    <div class="produk-info">
+                        <h3 class="KMK">Pupuk organik tanaman kaktus dan sukulen booster</h3>
+                        <p>perangsang agar cepat tumbuh tunas akar dan bunga segala jenis kaktus dan sukulens.</p>
+                        <div class="harga">Rp45.000 / Pcs</div>
+                        <div class="btn-group">
+                            <button class="btn-beli"
+                                onclick="tambahKeKeranjang('Pupuk organik tanaman kaktus dan sukulen booster', 45000, 'Beli', 'gambar/pupuk kaktus 5.webp')">Beli</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="produk-card">
+                    <img src="gambar/pupuk kaktus 7.webp" alt="Pupuk Kaktus 7" class="produk-img" />
+                    <div class="produk-info">
+                        <h3 class="KMK">Pupuk Kaktus Sukulen Organik Siap Pakai 100 ml</h3>
+                        <p>Cocok untuk semua jenis kaktus dan sukulen.</p>
+                        <div class="harga">Rp 80.000 / Botol</div>
+                        <div class="btn-group">
+                            <button class="btn-beli"
+                                onclick="tambahKeKeranjang('Pupuk organik tanaman kaktus dan sukulen booster', 80000, 'Beli', 'gambar/pupuk kaktus 7.webp')">Beli</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            </div>
+        </main>
+
+        <main>
+            <h1 class="about-title">Koleksi souvernir Kaktus </h1>
+            <div class="produk-grid">
+                <article class="produk-card">
+                    <img src="gambar/souvernir kaktus.jpg" alt="souvernir kaktus" class="produk-img" />
+                    <div class="produk-info">
+                        <h3 class="KMK">Saguaro Barrel Cactus Gel Pens</h3>
+                        <p>Cocok untuk alat sekolah .</p>
+                        <div class="harga">Rp 12.000 / Pcs</div>
+                        <div class="btn-group">
+                            <button class="btn-beli"
+                                onclick="tambahKeKeranjang('Saguaro Barrel Cactus Gel Pens', 12000, 'Beli', 'gambar/souvernir kaktus.jpg')">Beli</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="produk-card">
+                    <img src="gambar/souvernir kaktus 2.jpg" alt="souvernir kaktus 2" class="produk-img" />
+                    <div class="produk-info">
+                        <h3 class="KMK">Cactus Keychains </h3>
+                        <p>cocok untuk aksesoris tas, kunci pintu, kunci motor.</p>
+                        <div class="harga">Rp 10.000 / Pcs</div>
+                        <div class="btn-group">
+                            <button class="btn-beli"
+                                onclick="tambahKeKeranjang('Cactus Keychains', 10000, 'Beli', 'gambar/souvernir kaktus 2.jpg')">Beli</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="produk-card">
+                    <img src="gambar/souvernir kaktus 3.webp" alt="souvernir kaktus 3" class="produk-img" />
+                    <div class="produk-info">
+                        <h3 class="KMK">Cactus Tealight Candles,12 Pieces Handmade</h3>
+                        <p>kaktus mini.</p>
+                        <div class="harga">Rp 70.000 / Pck</div>
+                        <div class="btn-group">
+                            <button class="btn-beli"
+                                onclick="tambahKeKeranjang('Cactus Tealight Candles,12 Pieces Handmade', 70000, 'Beli', 'gambar/souvernir kaktus 3.webp')">Beli</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="produk-card">
+                    <img src="gambar/souvernir kaktus 4.jpg" alt="souvernir kaktus 4" class="produk-img" />
+                    <div class="produk-info">
+                        <h3 class="KMK">Cactus Shaped Candles</h3>
+                        <p>cocok sepagai penerang di meja makan kalian.</p>
+                        <div class="harga">Rp 25.000 / Pcs</div>
+                        <div class="btn-group">
+                            <button class="btn-beli"
+                                onclick="tambahKeKeranjang('Cactus Shaped Candles', 25000, 'Beli', 'gambar/souvernir kaktus 4.jpg')">Beli</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="produk-card">
+                    <img src="gambar/souvernir kaktus 5.webp" alt="souvernir kaktus 5" class="produk-img" />
+                    <div class="produk-info">
+                        <h3 class="KMK">Possitive Crochet Succulent Plant for Mom, Handmade Knitted Cactus </h3>
+                        <p>cocok sebagai hadiah.</p>
+                        <div class="harga">Rp 65.000 / Pcs</div>
+                        <div class="btn-group">
+                            <button class="btn-beli"
+                                onclick="tambahKeKeranjang('Possitive Crochet Succulent Plant for Mom, Handmade Knitted Cactus', 65000, 'Beli', 'gambar/souvernir kaktus 5.webp')">Beli</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="produk-card">
+                    <img src="gambar/souvernir kaktus 6.jpg" alt="souvernir kaktus 6" class="produk-img" />
+                    <div class="produk-info">
+                        <h3 class="KMK">50 Pcs Wooden Push Pins</h3>
+                        <p>SPeniti Lucu untuk Foto Dinding, Peta, Papan Buletin atau Papan Gabus Dekorasi Kantor Rumah.
+                        </p>
+                        <div class="harga">Rp 80.000 / Pack</div>
+                        <div class="btn-group">
+                            <button class="btn-beli"
+                                onclick="tambahKeKeranjang('50 Pcs Wooden Push Pins', 80000, 'Beli', 'gambar/souvernir kaktus 6.jpg')">Beli</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="produk-card">
+                    <img src="gambar/souvernir kaktus 7.jpg" alt="souvernir kaktus 7" class="produk-img" />
+                    <div class="produk-info">
+                        <h3 class="KMK"> Socks</h3>
+                        <p>Nyaman dipakai.</p>
+                        <div class="harga">Rp 36.000 / Pcs</div>
+                        <div class="btn-group">
+                            <button class="btn-beli"
+                                onclick="tambahKeKeranjang('Socks', 36000, 'Beli', 'gambar/souvernir kaktus 7.jpg')">Beli</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="produk-card">
+                    <img src="gambar/souvernir kaktus 8.jpg" alt="souvernir kaktus 8" class="produk-img" />
+                    <div class="produk-info">
+                        <h3 class="KMK"> Cactus Cosmetic Bag Cute </h3>
+                        <p>Tas Makeup Mall Tas Perlengkapan Mandi Travel Ritsleting untuk Anak Perempuan Hadiah Bunga
+                            untuk Saudari Tas Makeup Tanaman Hijau Hadiah untuk Wanita.</p>
+                        <div class="harga">Rp 28.000 /Pcs</div>
+                        <div class="btn-group">
+                            <button class="btn-beli"
+                                onclick="tambahKeKeranjang('Cactus Cosmetic Bag Cute', 28000, 'Beli', 'gambar/souvernir kaktus 8.jpg')">Beli</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            </div>
+        </main>
+    </main>
+    <footer>
+        <p>&copy; 2025 KaktusKu | Merawat Tanaman, Menyegarkan Hidup 🌿</p>
+        <div class="social-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("side-menu");
+            menu.classList.toggle("open");
+        }
+    </script>
+
+    <script>
+        // Toggle menu saat ikon ☰ diklik
+        function toggleMenu() {
+            const menu = document.getElementById("side-menu");
+            menu.classList.toggle("open");
+        }
+
+        // Menutup side menu jika klik di luar
+        document.addEventListener("click", function (event) {
+            const menu = document.getElementById("side-menu");
+            const menuIcon = document.querySelector(".menu-icon");
+
+            // Jika menu terbuka dan klik bukan di dalam menu atau ikon menu
+            if (menu.classList.contains("open") &&
+                !menu.contains(event.target) &&
+                !menuIcon.contains(event.target)) {
+                menu.classList.remove("open");
+            }
+        });
+    </script>
+
+    <script>
+        const produkCards = document.querySelectorAll('.produk-card');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                    observer.unobserve(entry.target); // agar tidak animasi ulang
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+
+        produkCards.forEach(card => observer.observe(card));
+    </script>
+
+    <script>
+        let keranjang = JSON.parse(localStorage.getItem("keranjang")) || [];
+
+        function tambahKeKeranjang(nama, tipe) {
+            keranjang.push({ nama: nama, tipe: tipe });
+            localStorage.setItem("keranjang", JSON.stringify(keranjang));
+            updateCartCount();
+            alert(`${nama} ditambahkan ke keranjang ${tipe}`);
+        }
+
+        function updateCartCount() {
+            const countElement = document.getElementById("cart-count");
+            countElement.textContent = keranjang.length;
+        }
+
+        function toggleKeranjang() {
+            alert("Isi keranjang: " + keranjang.map(item => `${item.nama} (${item.tipe})`).join(", "));
+        }
+
+        // Update angka saat halaman dimuat
+        document.addEventListener("DOMContentLoaded", updateCartCount);
+    </script>
+
+    <script>
+        function tambahKeKeranjang(nama, harga, tipe, gambar) {
+            let keranjang = JSON.parse(localStorage.getItem("keranjang")) || [];
+
+            keranjang.push({ nama: nama, harga: harga, tipe: tipe, gambar: gambar });
+
+            localStorage.setItem("keranjang", JSON.stringify(keranjang));
+
+            document.getElementById("cart-count").textContent = keranjang.length;
+            alert(`${nama} ditambahkan ke keranjang ${tipe}`);
+        }
+
+        window.onload = () => {
+            const keranjang = JSON.parse(localStorage.getItem("keranjang")) || [];
+            document.getElementById("cart-count").textContent = keranjang.length;
+        };
+    </script>
+
+      <!-- Tes icon WA -->
+    <a
+    href="https://wa.me/6285769659417"
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener"
+  >
+    <i class="fa fa-whatsapp"></i> Silahkan Hubungi Saya
+  </a>
+  <!-- Tes icon wa end -->
+</body>
+
+</html>

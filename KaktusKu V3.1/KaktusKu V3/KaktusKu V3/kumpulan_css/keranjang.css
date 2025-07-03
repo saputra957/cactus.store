@@ -1,0 +1,180 @@
+  * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+  }
+
+  body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+  }
+
+  .header {
+      background: linear-gradient(to right, #43a047, #2e7d32);
+      color: white;
+      padding: 18px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 0 0 12px 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      animation: slideDown 0.6s ease-in-out;
+  }
+
+  .logo-area {
+      display: flex;
+      align-items: center;
+      font-size: 1.8rem;
+      font-weight: 700;
+      gap: 10px;
+  }
+
+  .logo-icon {
+      font-size: 2rem;
+  }
+
+  .logo-text {
+      font-family: "Pacifico";
+  }
+
+  .back-button {
+      background-color: #f1f8e9;
+      color: #2e7d32;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      border: 2px solid #a5d6a7;
+      transition: all 0.3s ease;
+      font-family: 'Inter', sans-serif;
+  }
+
+  .back-button i {
+      margin-right: 8px;
+  }
+
+  .back-button:hover {
+      background-color: #c8e6c9;
+      color: #1b5e20;
+      transform: translateY(-2px);
+  }
+
+  @keyframes slideDown {
+      from {
+          opacity: 0;
+          transform: translateY(-20px);
+      }
+
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+
+
+  .cart-container {
+      max-width: 1100px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+  }
+
+  .cart-title {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #2e7d32;
+  }
+
+  .cart-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 16px;
+      gap: 20px;
+  }
+
+  .cart-item img {
+      width: 120px;
+      height: 120px;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 2px solid #c8e6c9;
+  }
+
+  .cart-info h4 {
+      margin-bottom: 6px;
+      font-size: 1.2rem;
+  }
+
+  .cart-info p {
+      margin-bottom: 4px;
+      color: #666;
+  }
+
+  .total-harga {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #1b5e20;
+      text-align: right;
+      margin-top: 30px;
+  }
+
+  .cart-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+  }
+
+  .cart-actions button {
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+  }
+
+  .cart-actions button:hover {
+      background-color: #388e3c;
+      transform: translateY(-2px);
+  }
+
+  .empty {
+      text-align: center;
+      padding: 60px 20px;
+      font-size: 1.1rem;
+      color: #999;
+  }
+
+  .cart-item img:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+  }
+
+  /* ANIMASI LOGO */
+  @keyframes fadeInLeft {
+      0% {
+          opacity: 0;
+          transform: translateX(-30px);
+      }
+
+      100% {
+          opacity: 1;
+          transform: translateX(0);
+      }
+  }
+
+  .logo-icon,
+  .logo-text {
+      animation: fadeInLeft 0.8s ease-out;
+  }

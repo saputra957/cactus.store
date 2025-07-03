@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keranjang - KaktusKu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Pacifico&family=Quicksand:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="kumpulan_css/keranjang.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo-area">
+            <span class="logo-icon">🌵</span>
+            <span class="logo-text">KaktusKu</span>
+        </div>
+        <a href="products.html" class="back-button">
+            <i class="fa fa-arrow-left"></i> Kembali ke Produk
+        </a>
+    </header>
+
+
+    <div class="cart-container">
+        <div class="cart-title">Keranjang Belanja Anda</div>
+        <div id="cart-items"></div>
+        <div class="total-harga" id="total-harga">Total: Rp 0</div>
+        <div class="cart-actions">
+            <button onclick="clearCart()"><i class="fa fa-trash"></i> Kosongkan</button>
+            <button onclick="window.location.href='products.html'"><i class="fa fa-arrow-left"></i> Belanja
+                Lagi</button>
+            <button onclick="bayar()"><i class="fa fa-credit-card"></i> Bayar</button>
+        </div>
+    </div>
+
+    <script>
+        function loadCart() {
+            const cart = JSON.parse(localStorage.getItem("keranjang")) || [];
+            const container = document.getElementById("cart-items");
+            const totalEl = document.getElementById("total-harga");
+            container.innerHTML = "";
+            if (cart.length === 0) {
+                container.innerHTML = "<div class='empty'>Keranjang Anda masih kosong 😕</div>";
+                totalEl.textContent = "Total: Rp 0";
+                return;
+            }
+            let total = 0;
+            cart.forEach(item => {
+                const itemEl = document.createElement("div");
+                itemEl.className = "cart-item";
+                itemEl.innerHTML = `
+          <img src="${item.gambar}" alt="${item.nama}" />
+          <div class="cart-info">
+            <h4>${item.nama}</h4>
+            <p>Status: ${item.tipe}</p>
+            <p>Harga: Rp ${item.harga.toLocaleString()}</p>
+          </div>
+        `;
+                container.appendChild(itemEl);
+                total += item.harga;
+            });
+            totalEl.textContent = "Total: Rp " + total.toLocaleString();
+        }
+
+        function clearCart() {
+            if (confirm("Yakin ingin mengosongkan keranjang?")) {
+                localStorage.removeItem("keranjang");
+                loadCart();
+            }
+        }
+
+        function bayar() {
+            window.location.href = "pembayaran.html";
+        }
+
+
+        window.onload = loadCart;
+    </script>
+</body>
+
+</html>

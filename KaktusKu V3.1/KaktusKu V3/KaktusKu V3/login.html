@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - KaktusKu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="kumpulan_css/login_signup.css">
+
+    <style>
+        body {
+            min-height: 100vh;
+            background: url('img/kaktus.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="overlay"></div>
+
+    <div class="login-container">
+        <h2>Masuk ke <span style="color:#558b2f;">KaktusKu</span></h2>
+        <form action="dashboard.html" method="post">
+            <input type="text" name="username" placeholder="Username atau Email" required />
+            <input type="password" name="password" placeholder="Kata Sandi" required />
+            <button type="submit">Login</button>
+            <div class="signup-link">
+                Belum punya akun? <a href="signup.html">Daftar sekarang</a>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

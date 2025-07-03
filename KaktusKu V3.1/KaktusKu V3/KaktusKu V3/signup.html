@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daftar - KaktusKu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="kumpulan_css/login_signup.css">
+  <style>
+    body {
+      min-height: 100vh;
+      background: url('https://images.unsplash.com/photo-1617114337245-df33c41b55d1?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="overlay"></div>
+
+  <div class="signup-container">
+    <h2>Daftar ke <span style="color:#558b2f;">KaktusKu</span></h2>
+    <form action="login.html" method="post">
+      <input type="text" name="fullname" placeholder="Nama Lengkap" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="text" name="username" placeholder="Username" required />
+      <input type="password" name="password" placeholder="Kata Sandi" required />
+      <button type="submit">Daftar</button>
+      <div class="login-link">
+        Sudah punya akun? <a href="login.html">Login di sini</a>
+      </div>
+    </form>
+  </div>
+
+</body>
+
+</html>
